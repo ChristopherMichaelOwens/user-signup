@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>USER SIGNUP</title>
+    </head>
+    <body>
+        <h1>Signup</h1>
+		<form action = "/welcome" method = "POST">
+			<table>
+				<tbody><tr>
+					<td><label for ="username">Username:</label></td>
+					<td>
+						<input name="username" type="text">
+						{% if error_user %}
+						<span class="error"></span>
+						{% endif %}
+					</td>
+				</tr>
+				<tr>
+					<td><label for = "password">Password:</label></td>
+					<td>
+						<input name = "password" type = "password">
+						{% if error_pass %}
+						<span class = "error"></span>
+						{% endif %}
+					</td>
+				</tr>
+				<tr>
+					<td><label for = "verify">Verify Password:</label></td>
+					<td>
+						<input name = "verify" type = "password">
+						{% if verify_pass %}
+						<span class = "error"></span>
+						{% endif %} 
+					</td>
+				</tr>
+				<tr>
+					<td><label for = "email"> Email (optional):</label></td>
+					<td>
+						<input name = "email">
+						<span class = "error"></span>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<input type = "submit">
+		</form>
+		
+</body></html>
+<!--		<form action="/add" method="post">
+        <label>
+            I want to add
+            <input type="text" name="new-movie"/>
+            to my watchlist.
+        </label>
+        <input type="submit" value="Add It"/>
+    </form>
+	 <form action="/crossoff" method="post">
+			<label>
+				I want to cross off
+				<select name="crossed-off-movie"/>
+					{% for movie in watchlist %}
+						<option key="{{movie}}">{{ movie }}</option>
+					{% endfor %}
+					{{watchlist}}
+					
+				</select>
+				from my watchlist.
+			</label>
+			<input type="submit" value="Cross It Off"/>
+	</form>
+	</body>
+</html>
+-->
+
